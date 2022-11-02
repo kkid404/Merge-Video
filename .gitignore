@@ -1,0 +1,9 @@
+__pycache__
+venv
+log.txt
+token.json
+.env
+sonOfgad.session-journal
+settings.ini
+test.py
+test1.py

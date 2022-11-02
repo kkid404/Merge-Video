@@ -1,0 +1,93 @@
+{% extends 'base.html' %} {% block title %} Главная страница {% endblock %} {%
+block body %}
+<!--Merge video -->
+<div
+  class="container video__merge"
+  id="video"
+>
+  <h3 class="heading">Merge Your videos online from YouTube with one click</h3>
+  <p class="video_input">
+    Instantly upload any video links and combine videos with one click. There is
+    no need to use your phone or computer — use merge-video.com instead. Pay for
+    the power of our Cloud Online Servers.
+  </p>
+  <div class="container">
+    <form method="POST" id="form__videos">
+      <div class="inputs">
+        {{ form.hidden_tag()}} {{form.name}} {{form.name}}
+      </div>
+      <div class="btns">
+        <button type="button" class="btn btn__main btn__add add_video">
+          Add Video
+        </button>
+        <button type="submit" class="btn btn__main btn__send__video">
+          Start Merge
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<div
+  class="container playlist__merge white"
+  id="playlist"
+>
+  <h3 class="heading white">Merge Your playlists online from YouTube with one click</h3>
+  <p class="video_input">
+    Instantly upload any video links and combine videos with one click. There is
+    no need to use your phone or computer — use merge-video.com instead. Pay for
+    the power of our Cloud Online Servers.
+  </p>
+  <div class="container">
+    <form method="POST" id="form__playlist">
+      <div class="inputs">
+        {{ form.hidden_tag()}} {{form.name}}
+      </div>
+      <div class="btns">
+        <button type="button" class="btn btn__main btn__add add_playlist">
+          Add Video
+        </button>
+        <button type="submit" class="btn btn__main btn__send__playlist">
+          Start Merge
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="container">
+      <div class="footer">
+        <ul class="nav-footer">
+          <li class="nav-item item-footer"><a href="#cover" class="link-footer">Home</a></li>
+          <li class="nav-item item-footer"><a target="_blank" href="http://t.me/MergeVideo_bot" class="link-footer">Telegram-bot</a></li>
+          <li class="nav-item item-footer"><a href="#video" class="link-footer">Merge video</a></li>
+          <li class="nav-item item-footer"><a href="#playlist" class="link-footer">Merge playlist</a></li>
+        </ul>
+        <hr class="hr-line">
+        <div class="footer-text">
+          <p class="text-footer">© 2022 YouTube Merge</p>
+          <p class="text-footer"><a target="_blank" class="link-footer" href="https://github.com/kkid404">by kkid </a></p>
+        </div>
+      </div>
+    </footer>  
+
+  <!-- Modal window -->
+  <div id="popup" class="popup">
+    <div class="popup__content">
+        <p class="text_popup">
+        </p>
+        <div class="btns__popup active">
+            <button class="btn btn__popup btn__close">Close</button>
+            <button class="btn btn__popup chek__pay">check payment</button>
+            <a target = "_blank" href="" class="btn btn__popup btn__pay">Pay</a>  
+        </div>
+    </div>
+<!--Merge playlist -->
+<script src="{{ url_for('static', filename='script/video.js') }}"></script>
+<script src="{{ url_for('static', filename='script/playlist.js') }}"></script>
+
+{% endblock %}

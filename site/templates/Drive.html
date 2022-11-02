@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {% block title %} Главная страница {% endblock %} {%
+  block body %}
+  <!--Merge video -->
+  <div
+    class="container video__merge"
+    id="Drive"
+  >
+    <h3 class="heading">Merge Your videos online from Google Drive with one click</h3>
+    <p class="video_input">
+      Instantly upload any video links and combine videos with one click. There is
+      no need to use your phone or computer — use merge-video.com instead. Pay for
+      the power of our Cloud Online Servers.
+    </p>
+    <div class="container">
+      <form method="POST" id="form__drive">
+        <div class="inputs">
+          {{ form.hidden_tag()}} {{form.name}} {{form.name}}
+        </div>
+        <div class="btns">
+          <button type="button" class="btn btn__main btn__add add_drive">
+            Add Video
+          </button>
+          <button type="submit" class="btn btn__main btn__send__drive">
+            Start Merge
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div
+    class="container playlist__merge white"
+    id="Drive-folder"
+  >
+    <h3 class="heading white">Merge Your folders online from Google Drive with one click</h3>
+    <p class="video_input">
+      Instantly upload any video links and combine videos with one click. There is
+      no need to use your phone or computer — use merge-video.com instead. Pay for
+      the power of our Cloud Online Servers.
+    </p>
+    <div class="container">
+      <form method="POST" id="form__folders">
+        <div class="inputs">
+          {{ form.hidden_tag()}} {{form.name}}
+        </div>
+        <div class="btns">
+          <button type="button" class="btn btn__main btn__add add_folders">
+            Add Video
+          </button>
+          <button type="submit" class="btn btn__main btn__send__folders">
+            Start Merge
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+    <!-- Footer -->
+    <footer class="container">
+      <div class="footer">
+        <ul class="nav-footer">
+          <li class="nav-item item-footer"><a href="#cover" class="link-footer">Home</a></li>
+          <li class="nav-item item-footer"><a target="_blank" href="http://t.me/MergeVideo_bot" class="link-footer">Telegram-bot</a></li>
+          <li class="nav-item item-footer"><a href="#video" class="link-footer">Merge video</a></li>
+          <li class="nav-item item-footer"><a href="#playlist" class="link-footer">Merge playlist</a></li>
+        </ul>
+        <hr class="hr-line">
+        <div class="footer-text">
+          <p class="text-footer">© 2022 YouTube Merge</p>
+          <p class="text-footer"><a target="_blank" class="link-footer" href="https://github.com/kkid404">by kkid </a></p>
+        </div>
+      </div>
+    </footer>
+  
+  
+
+  <!--Merge playlist -->
+    <!-- Modal window -->
+    <div id="popup" class="popup">
+      <div class="popup__content">
+          <p class="text_popup">
+          </p>
+          <div class="btns__popup active">
+              <button class="btn btn__popup btn__close">Close</button>
+              <button class="btn btn__popup chek__pay">check payment</button>
+              <a target = "_blank" href="" class="btn btn__popup btn__pay">Pay</a>  
+          </div>
+      </div>
+  <script src="{{ url_for('static', filename='script/drive_folders.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/drive_links.js') }}"></script>
+  {% endblock %}
+  

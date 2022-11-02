@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/null.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mediacreen.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo2.ico') }}">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <img class="preloader__img" src="../static/img/load.gif" alt=""> 
+    </div>
+
+    <!-- Header -->
+    <header class="container clone">
+        <div class="header">
+            <a class="nav__logo" href="/youtube"><img class="logo" src="{{ url_for('static', filename='img/logo2.png')}}" alt="logotip"></a>
+            <ul class="nav">
+                <li class="nav-item header-item"><a href="/youtube" class="header-link">Merge YouTube</a></li>
+                <li class="nav-item header-item"><a href="/google_drive" class="header-link">Merge Google Drive</a></li>
+                <li class="nav-item header-item"><a href="/google_photos" class="header-link">Merge Google Photos</a></li>
+            </ul>
+        </div>
+    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    {% block body %}{% endblock %}
+
+
+</body>
+</html>
